@@ -1,0 +1,37 @@
+to remove .html extension:
+
+create .htaccess file and add this code 
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+
+method 0: add in head
+   <script>
+        if (window.location.pathname.endsWith('.html')) {
+            window.location.pathname = window.location.pathname.slice(0, -5);
+        }
+    </script>
+
+
+Method 2:
+
+Install Jekyll Redirect Plugin:
+Add the jekyll-redirect-from plugin to your Jekyll site. In your Gemfile, add:
+gem "jekyll-redirect-from"
+
+Update _config.yml:
+Add the plugin to your _config.yml file:
+plugins:
+  - jekyll-redirect-from
+
+
+Create Redirect Files:
+For each HTML file you want to hide the extension for, create a markdown file with the same name. 
+
+For example, if you have about.html, create about.md with the following content:
+redirect_to: /about.html
+
+
