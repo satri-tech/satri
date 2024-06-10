@@ -160,7 +160,7 @@ h6,
 }
 
 @media (max-width: 768px) {
-    .hero-image img {
+    .hero-image img , .about-img img{
         height: 100%;
     }
 
