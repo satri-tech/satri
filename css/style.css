@@ -161,7 +161,7 @@ h6,
 
 @media (max-width: 768px) {
     .hero-image img {
-        height: 100vh;
+        height: 100%;
     }
 
     .satri-about-order-1 {
