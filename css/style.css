@@ -155,7 +155,7 @@ h6,
 }
 
 .hero-image img {
-    height: calc(100vh - 75px);
+    height: 50vh;
     object-fit: cover;
 }
 
