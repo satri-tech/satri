@@ -117,7 +117,7 @@ h6,
         background: var(--primary);
     }
 
-    .navbar .navbar-nav .nav-link  {
+    .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -152,6 +152,11 @@ h6,
 
 .hero-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
+}
+
+.hero-image img {
+    height: calc(100vh - 75px);
+    object-fit: cover;
 }
 
 
@@ -219,6 +224,7 @@ h6,
     background: url(../img/bg-about-img.png) top left no-repeat;
     background-size: contain;
 }
+
 
 
 /*** Service ***/
@@ -300,24 +306,26 @@ h6,
     background-size: cover;
 }
 
+
+
 @media (min-width: 992px) {
     .newsletter .container {
         max-width: 100% !important;
     }
 
-    .newsletter .newsletter-text  {
+    .newsletter .newsletter-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .newsletter .newsletter-text  {
+    .newsletter .newsletter-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .newsletter .newsletter-text  {
+    .newsletter .newsletter-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -327,11 +335,11 @@ h6,
 .case-item img {
     transition: .5s;
 }
-  
+
 .case-item:hover img {
     transform: scale(1.2);
 }
-  
+
 .case-overlay {
     position: absolute;
     padding: 30px;
@@ -476,7 +484,7 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
     border: 1px solid rgba(256, 256, 256, .1);
     border-radius: 40px;
     transition: .3s;
@@ -491,7 +499,7 @@ h6,
     margin-bottom: 10px;
     padding: 0;
     text-align: left;
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
     font-weight: normal;
     transition: .3s;
 }
@@ -520,7 +528,7 @@ h6,
 }
 
 .footer .copyright a {
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
 }
 
 .footer .copyright a:hover {
@@ -537,4 +545,18 @@ h6,
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+@media (max-width: 768px) {
+    .hero-image img {
+        height: 100%;
+    }
+
+    .satri-about-order-1 {
+        order: 1;
+    }
+
+    .satri-about-order-1 {
+        order: 0;
+    }
 }
