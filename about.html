@@ -230,15 +230,18 @@
                         Pokhara, Kaski, Nepal, 33700
                     </p>
                     <p><a href="tel:9707722844"><i class="fa fa-phone-alt me-3"></i>+977 9707722844</a></p>
-                    <p><a href="mailto:info.satri@gmail.com"><i
-                                class="fa fa-envelope me-3"></i>info.satri@gmail.com</a>
+                    <p><a href="mailto:info.satri@gmail.com"><i class="fa fa-envelope me-3"></i>info.satri@gmail.com</a>
                     </p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/media-satri"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SATRI_OFFICIAL"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/media.satri/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/media-satri/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/media-satri"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SATRI_OFFICIAL"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/media.satri/"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/media-satri/"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
@@ -255,10 +258,12 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy;2024 <a class="border-bottom" href="index.html">Samarth Technical Research and Innovations</a>, All Right Reserved.
+                        &copy;2024 <a class="border-bottom" href="index.html">Samarth Technical Research and
+                            Innovations</a>, All Right Reserved.
 
                         Developed
-                        By <a class="border-bottom" href="https://satritech.com">Samarth Technical Research and Innovations</a>
+                        By <a class="border-bottom" href="https://satritech.com">Samarth Technical Research and
+                            Innovations</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
@@ -299,6 +304,29 @@
         }
     </script>
     <!-- contact form -->
+
+    <!-- navbar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navItems = document.querySelectorAll(".nav-item");
+            const currentPath = window.location.pathname;
+
+            navItems.forEach(navItem => {
+                if (navItem.href.includes(currentPath)) {
+                    navItem.classList.add("active");
+                    let parent = navItem.parentElement;
+                    while (parent && parent.tagName !== 'NAV') {
+                        if (parent.classList.contains('dropdown-menu')) {
+                            parent.previousElementSibling.classList.add('active');
+                        }
+                        parent = parent.parentElement;
+                    }
+                }
+            });
+        });
+
+    </script>
+    <!-- navbar -->
 
 
     <!-- JavaScript Libraries -->
