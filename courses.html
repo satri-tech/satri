@@ -56,9 +56,9 @@
                 <a href="index.html" class="navbar-brand">
                     <img src="img/white.png" alt="" width="150" height="50">
                 </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
+                <button type="button" class="border-0 ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" style="background: #1363c6;">
+                    <span class="text-white">&#9776;</span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
@@ -268,7 +268,7 @@
                         &copy;2024 <a class="border-bottom" href="index.html">Samarth Technical Research and
                             Innovations</a>, All Right Reserved.
 
-                   
+
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
@@ -308,33 +308,33 @@
         }
     </script>
     <!-- contact form -->
-   <!-- navbar -->
-   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+    <!-- navbar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
 
-        // Function to remove active class from all nav items
-        const removeActiveClass = () => {
-            navLinks.forEach(link => link.classList.remove('active'));
-        };
+            // Function to remove active class from all nav items
+            const removeActiveClass = () => {
+                navLinks.forEach(link => link.classList.remove('active'));
+            };
 
-        // Event listener for navigation item clicks
-        document.querySelector('.navbar-nav').addEventListener('click', (event) => {
-            const clickedNavItem = event.target.closest('.nav-link, .dropdown-item');
-            if (!clickedNavItem) return; // Exit if clicked element is not a nav item
+            // Event listener for navigation item clicks
+            document.querySelector('.navbar-nav').addEventListener('click', (event) => {
+                const clickedNavItem = event.target.closest('.nav-link, .dropdown-item');
+                if (!clickedNavItem) return; // Exit if clicked element is not a nav item
 
-            removeActiveClass(); // Remove active class from all nav items
-            clickedNavItem.classList.add('active'); // Add active class to clicked nav item
+                removeActiveClass(); // Remove active class from all nav items
+                clickedNavItem.classList.add('active'); // Add active class to clicked nav item
 
-            // If it's a dropdown item, also add active class to the parent dropdown link
-            const dropdown = clickedNavItem.closest('.dropdown-menu');
-            if (dropdown) {
-                dropdown.previousElementSibling.classList.add('active');
-            }
+                // If it's a dropdown item, also add active class to the parent dropdown link
+                const dropdown = clickedNavItem.closest('.dropdown-menu');
+                if (dropdown) {
+                    dropdown.previousElementSibling.classList.add('active');
+                }
+            });
         });
-    });
-</script>
-<!-- navbar -->
+    </script>
+    <!-- navbar -->
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

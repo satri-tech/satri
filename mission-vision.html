@@ -55,9 +55,9 @@
                 <a href="index.html" class="navbar-brand">
                     <img src="img/white.png" alt="" width="150" height="50">
                 </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
+                <button type="button" class="border-0 ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" style="background: #1363c6;">
+                    <span class="text-white">&#9776;</span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
@@ -157,10 +157,14 @@
                     </p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/satritech"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SATRI_OFFICIAL"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/media.satri/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/media-satri/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/satritech"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SATRI_OFFICIAL"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/media.satri/"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/media-satri/"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
@@ -180,7 +184,7 @@
                         &copy;2024 <a class="border-bottom" href="index.html">Samarth Technical Research and
                             Innovations</a>, All Right Reserved.
 
-                      
+
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
@@ -220,28 +224,28 @@
         }
     </script>
     <!-- contact form -->
-  <!-- navbar -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const navItems = document.querySelectorAll(".nav-item");
-        const currentPath = window.location.pathname;
+    <!-- navbar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navItems = document.querySelectorAll(".nav-item");
+            const currentPath = window.location.pathname;
 
-        navItems.forEach(navItem => {
-            if (navItem.href.includes(currentPath)) {
-                navItem.classList.add("active");
-                let parent = navItem.parentElement;
-                while (parent && parent.tagName !== 'NAV') {
-                    if (parent.classList.contains('dropdown-menu')) {
-                        parent.previousElementSibling.classList.add('active');
+            navItems.forEach(navItem => {
+                if (navItem.href.includes(currentPath)) {
+                    navItem.classList.add("active");
+                    let parent = navItem.parentElement;
+                    while (parent && parent.tagName !== 'NAV') {
+                        if (parent.classList.contains('dropdown-menu')) {
+                            parent.previousElementSibling.classList.add('active');
+                        }
+                        parent = parent.parentElement;
                     }
-                    parent = parent.parentElement;
                 }
-            }
+            });
         });
-    });
 
-</script>
-<!-- navbar -->
+    </script>
+    <!-- navbar -->
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
