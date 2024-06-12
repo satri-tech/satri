@@ -113,7 +113,7 @@ h6,
 
 .active {
     font-weight: bold !important;
-    color:#14183E !important; /* Or any other styling you prefer */
+    color:#fbfbfd !important; /* Or any other styling you prefer */
     text-decoration: underline !important;
 }
 
