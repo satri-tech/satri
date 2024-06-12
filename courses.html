@@ -31,11 +31,11 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <script>
+    <!-- <script>
         if (window.location.pathname.endsWith('.html')) {
             window.location.pathname = window.location.pathname.slice(0, -5);
         }
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -62,7 +62,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Company</a>
                             <div class="dropdown-menu bg-light mt-2">
@@ -72,9 +72,9 @@
                                 <a href="products.html" class="dropdown-item">Products</a>
                             </div>
                         </div>
-                        <a href="project.html" class="nav-item nav-link">Projects</a>
-                        <a href="courses.html" class="nav-item nav-link">Courses</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="project.html" class="nav-item nav-link ">Projects</a>
+                        <a href="courses.html" class="nav-item nav-link ">Courses</a>
+                        <a href="contact.html" class="nav-item nav-link ">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -224,7 +224,7 @@
                 <div class="col-md-6 col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <a href="index.html" class="d-inline-block mb-3">
                         <h4 class="text-white">Samarth <span class="text-primary">Technical Research </span>&
-                            Innovation
+                            Innovations
                         </h4>
                     </a>
                     <p class="mb-0">Harness the Power of Research & Innovation, Augmented Reality, Advanced
@@ -241,10 +241,14 @@
                     </p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/satritech"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SATRI_OFFICIAL"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/media.satri/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/media-satri/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/satritech"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SATRI_OFFICIAL"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/media.satri/"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/media-satri/"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
@@ -306,29 +310,33 @@
         }
     </script>
     <!-- contact form -->
-  <!-- navbar -->
-  <script>
+   <!-- navbar -->
+   <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const navItems = document.querySelectorAll(".nav-item");
-        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
 
-        navItems.forEach(navItem => {
-            if (navItem.href.includes(currentPath)) {
-                navItem.classList.add("active");
-                let parent = navItem.parentElement;
-                while (parent && parent.tagName !== 'NAV') {
-                    if (parent.classList.contains('dropdown-menu')) {
-                        parent.previousElementSibling.classList.add('active');
-                    }
-                    parent = parent.parentElement;
-                }
+        // Function to remove active class from all nav items
+        const removeActiveClass = () => {
+            navLinks.forEach(link => link.classList.remove('active'));
+        };
+
+        // Event listener for navigation item clicks
+        document.querySelector('.navbar-nav').addEventListener('click', (event) => {
+            const clickedNavItem = event.target.closest('.nav-link, .dropdown-item');
+            if (!clickedNavItem) return; // Exit if clicked element is not a nav item
+
+            removeActiveClass(); // Remove active class from all nav items
+            clickedNavItem.classList.add('active'); // Add active class to clicked nav item
+
+            // If it's a dropdown item, also add active class to the parent dropdown link
+            const dropdown = clickedNavItem.closest('.dropdown-menu');
+            if (dropdown) {
+                dropdown.previousElementSibling.classList.add('active');
             }
         });
     });
-
 </script>
 <!-- navbar -->
-
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
