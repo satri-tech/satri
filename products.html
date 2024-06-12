@@ -194,7 +194,7 @@
                     </p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/media-satri"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/satritech"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SATRI_OFFICIAL"><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/media.satri/"><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/media-satri/"><i class="fab fa-linkedin-in"></i></a>
@@ -260,7 +260,28 @@
         }
     </script>
     <!-- contact form -->
+  <!-- navbar -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const navItems = document.querySelectorAll(".nav-item");
+        const currentPath = window.location.pathname;
 
+        navItems.forEach(navItem => {
+            if (navItem.href.includes(currentPath)) {
+                navItem.classList.add("active");
+                let parent = navItem.parentElement;
+                while (parent && parent.tagName !== 'NAV') {
+                    if (parent.classList.contains('dropdown-menu')) {
+                        parent.previousElementSibling.classList.add('active');
+                    }
+                    parent = parent.parentElement;
+                }
+            }
+        });
+    });
+
+</script>
+<!-- navbar -->
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
