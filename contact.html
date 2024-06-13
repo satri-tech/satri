@@ -144,7 +144,7 @@
                         code and you're done.
                     </p>
                     <div class="wow fadeIn" data-wow-delay="0.3s">
-                        <form action="https://formspree.io/f/xvoejdge" method="POST" onsubmit="sendEmail(event)">
+                        <form action="https://formspree.io/f/xvoejdge" method="POST" id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -259,22 +259,7 @@
 
 
     <!-- contact form -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("service_3cjkb7a");
-        })();
-
-        function sendEmail(event) {
-            event.preventDefault();
-            emailjs.sendForm('service_3cjkb7a', 'template_jco6cvu', event.target)
-                .then(function () {
-                    alert('Email sent successfully!');
-                }, function (error) {
-                    // alert('Failed to send email:', error);
-                });
-        }
-    </script>
+  <script src="js/form.js"></script>
     <!-- contact form -->
 
     <!-- navbar -->
