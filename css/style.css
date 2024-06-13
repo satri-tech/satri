@@ -29,6 +29,17 @@
     z-index: 99;
 }
 
+.toggle-satri{
+    display: none !important;
+}
+
+@media (max-width: 992px) {
+    .toggle-satri{
+        display: block !important;
+    }
+   
+}
+
 
 /*** Heading ***/
 h1,
